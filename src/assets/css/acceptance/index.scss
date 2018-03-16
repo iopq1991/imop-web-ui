@@ -1,0 +1,101 @@
+@import './variables.scss';
+@import './element-ui.scss';
+
+* {
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+@media screen and (max-width: 1400px) {
+  body .search .el-checkbox__label{
+   padding-left: 2px;
+  }
+  body .search .el-checkbox-group .el-checkbox,body .search .el-checkbox + .el-checkbox {
+    margin-right: 4px;
+  }
+}
+
+//覆盖省份input样式
+.platformSelector-contianer{
+  .el-input__inner{
+    padding-left:5px !important;
+  }
+}
+
+.container .el-form-item__label {
+  font-size: 12px;
+}
+
+.container .el-table__empty-block {
+  height: 150px;
+}
+
+.color-success {color: #67c23a}
+.color-warning {color:#e6a23c}
+.color-danger {color: #f56c6c}
+.color-info {color: #909399}
+.color-primary {color: #0097FF}
+
+// 指令搜索样式
+.input_search {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  border: 1px solid $borderColor;
+  top: 40px;
+  width: 100%;
+  z-index: 100;
+  padding: 2px 0;
+  &:before {
+    position: absolute;
+    content: '';
+    border: 1px solid $borderColor;
+    width: 6px;
+    height: 6px;
+    border-bottom: none;
+    border-right: none;
+    top: -5px;
+    left: 22px;
+    background-color: #fff;
+    transform: rotate(45deg);
+  }
+  li {
+    padding-left: 20px;
+    line-height: 28px;
+    height: 28px;
+    cursor: pointer;
+    color: #616161;
+    font-size: 12px;
+    &:hover {
+      color: $textColor;
+      background-color: $menuBg;
+    }
+  }
+  .label {
+    padding: 3px 1px;
+    font-size: 12px;
+    background-color: #e6e6e6;
+    font-weight: normal;
+    white-space: nowrap;
+    border-radius: .25em;
+    margin-left: 5px;
+  }
+}
